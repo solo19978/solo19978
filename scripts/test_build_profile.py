@@ -51,7 +51,7 @@ class ProfileChecks(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder, patch.object(profile, "ROOT", Path(folder)):
             profile.build(data)
             paths = list((Path(folder)/"assets").glob("*.svg"))
-            self.assertEqual(len(paths), 8)
+            self.assertEqual(len(paths), 14)
             for path in paths:
                 root = ET.parse(path).getroot()
                 self.assertEqual(root.tag, "{http://www.w3.org/2000/svg}svg")

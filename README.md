@@ -6,36 +6,52 @@
 </picture>
 
 <p>
-  <a href="https://github.com/solo19978?tab=repositories"><img src="https://img.shields.io/badge/PUBLIC_PROJECTS-191B1F?style=for-the-badge&amp;logo=github&amp;logoColor=E6B450" alt="Explore public projects" /></a>
-  <a href="https://github.com/solo19978/quota-sentinel/releases"><img src="https://img.shields.io/badge/LATEST_RELEASES-191B1F?style=for-the-badge&amp;logo=github&amp;logoColor=E6B450" alt="Quota Sentinel releases" /></a>
+  <a href="#flagship-projects"><img src="https://img.shields.io/badge/FLAGSHIP_PROJECTS-191B1F?style=for-the-badge&amp;logoColor=E6B450" alt="Explore flagship projects" /></a>
+  <a href="#public-tools"><img src="https://img.shields.io/badge/PUBLIC_TOOLS-191B1F?style=for-the-badge&amp;logo=github&amp;logoColor=E6B450" alt="Explore public tools" /></a>
 </p>
 
 </div>
 
 ## Behind the builds
 
-I'm the creator behind **GrizzlyFX**. I build practical tools that reduce friction in creative and everyday workflows — from desktop software to controls that make familiar applications easier to use.
+I'm the creator behind **GrizzlyFX**. My main work is software for creators: helping people plan their work, organise their media and improve the editing experience.
 
 My focus is simple: clear interfaces, useful automation and more time for the work that matters.
 
-## Selected projects
+## Flagship projects
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/solo19978/quota-sentinel"><img src="assets/project-quota.svg" width="100%" alt="Quota Sentinel — experimental Windows desktop monitor for Claude Code and OpenAI Codex usage. Stylised illustration." /></a>
-      <p>An experimental Windows dock that keeps Claude Code and OpenAI Codex usage and reset times within reach.</p>
-      <p><a href="https://github.com/solo19978/quota-sentinel">Source &amp; documentation</a> · <a href="https://github.com/solo19978/quota-sentinel/releases">Releases</a></p>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/solo19978/loupedeck-power-profiles"><img src="assets/project-loupedeck.svg" width="100%" alt="Loupedeck Power Profiles — ready-to-use Loupedeck Live controls for creative and everyday workflows. Stylised illustration." /></a>
-      <p>A growing collection of Loupedeck Live profiles with consistent layouts, useful dial mappings and application-specific controls.</p>
-      <p><a href="https://github.com/solo19978/loupedeck-power-profiles">Explore the collection</a> · <a href="https://github.com/solo19978/loupedeck-power-profiles#profiles-available-now">Download profiles</a></p>
-    </td>
-  </tr>
-</table>
+My larger products span creator productivity, media organisation and editing workflows. Their source repositories remain private.
+
+<picture>
+  <source media="(max-width: 640px)" srcset="assets/flagship-creatorscope-mobile.svg" />
+  <img src="assets/flagship-creatorscope.svg" width="100%" alt="GFX CreatorScope — an accessible workspace for creators to plan, organise and manage their creative work. Private source." />
+</picture>
+
+<picture>
+  <source media="(max-width: 640px)" srcset="assets/flagship-den-mobile.svg" />
+  <img src="assets/flagship-den.svg" width="100%" alt="Den by GrizzlyFX — a desktop tool helping creatives organise and rediscover their media. Private source." />
+</picture>
+
+<picture>
+  <source media="(max-width: 640px)" srcset="assets/flagship-premiere-mobile.svg" />
+  <img src="assets/flagship-premiere.svg" width="100%" alt="GFX Live Monitor — a Premiere Pro companion exploring more flexible ways to preview work during the edit. Private source." />
+</picture>
+
+## Public tools
+
+Alongside the flagship products, I share smaller tools and workflow resources:
+
+| Tool | Purpose |
+| --- | --- |
+| [Quota Sentinel](https://github.com/solo19978/quota-sentinel) | An experimental Windows dock for Claude Code and OpenAI Codex usage and reset times. |
+| [Loupedeck Power Profiles](https://github.com/solo19978/loupedeck-power-profiles) | Ready-to-use Loupedeck Live profiles with familiar layouts and useful application controls. |
 
 ## Public build activity
+
+This snapshot covers the public tools below the flagship products; it is not a measure of development in the private repositories.
+
+<details>
+<summary><strong>View public activity statistics and build landscape</strong></summary>
 
 <a href="https://github.com/solo19978?tab=overview">
 <picture>
@@ -57,10 +73,13 @@ These are public project metrics, so they may differ from GitHub's contribution 
 
 <img src="assets/landscape.svg" width="100%" alt="Isometric landscape of the same public project commits over 12 weeks. Each column represents one day; height reflects its commit count." />
 
+</details>
+
 ## Tools &amp; workflows
 
 | Area | What I work with |
 | --- | --- |
+| Creator software | Accessible interfaces, planning tools, media organisation and editing workflows |
 | Desktop software | Rust, Tauri, Windows, HTML, CSS and JavaScript |
 | Workflow control | Loupedeck Live profiles, shortcuts, macros and dial mappings |
 | Creative applications | DaVinci Resolve, Blender and Samplitude |

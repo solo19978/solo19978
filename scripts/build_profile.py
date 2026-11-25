@@ -189,6 +189,48 @@ def project(kind):
     return svg(480, 355, title + " — " + subtitle + ". Stylised project illustration.", b)
 
 
+def flagship(kind, mobile=False):
+    # Deliberately written public summaries; never read private source or metadata here.
+    copy = {
+        "creatorscope": ("01 / CREATOR WORKSPACE", "GFX CREATORSCOPE", "Planning & productivity",
+                         "An accessible workspace for creators to plan,",
+                         "organise and manage their creative work."),
+        "den": ("02 / MEDIA WORKSPACE", "DEN BY GRIZZLYFX", "Media organisation",
+                "A desktop tool helping creatives organise",
+                "and rediscover their media."),
+        "premiere": ("03 / EDITING COMPANION", "GFX LIVE MONITOR", "Premiere Pro companion",
+                     "A creative review tool exploring more flexible",
+                     "ways to preview work during the edit."),
+    }
+    eyebrow, title, subtitle, line1, line2 = copy[kind]
+    w, h = (600, 280) if mobile else (1000, 250)
+    b = text(32, 37, eyebrow, 11, GOLD, extra='class="mono"')
+    b += text(30, 91, title, 34 if mobile else 38, WHITE, 800)
+    b += text(32, 124, subtitle, 19, GOLD)
+    b += text(32, 164, line1, 18, MUTED)
+    b += text(32, 190, line2, 18, MUTED)
+    b += text(32, h-24, "PRIVATE SOURCE", 10, MUTED, extra='class="mono"')
+    if not mobile:
+        b += rect(764, 41, 196, 165, "#151619", 12)
+        if kind == "creatorscope":
+            for i, height in enumerate((58, 78, 43)):
+                x = 786+i*51
+                b += rect(x, 71, 38, 105, "#202125", 5, "#3C3730")
+                b += rect(x+7, 83, 24, height, "#4A3C24", 3, "#766039")
+                b += f'<path d="M{x+8} 78 h22" stroke="{GOLD}"/>'
+        elif kind == "den":
+            for i in range(6):
+                x, y = 785+i%3*52, 77+i//3*49
+                b += rect(x, y, 42, 34, "#27251F", 5, "#6A5531")
+                b += f'<path d="M{x+11} {y+17} h20" stroke="{GOLD}"/>'
+        else:
+            b += rect(784, 74, 155, 81, "#24231F", 6, "#766039")
+            b += f'<path d="M853 98 l20 15 -20 15 Z" fill="none" stroke="{GOLD}" stroke-width="2"/>'
+            b += f'<path d="M801 174 h123" stroke="{GOLD}" stroke-width="2"/>'
+            b += f'<circle class="pulse" cx="851" cy="174" r="4" fill="{GOLD}"/>'
+    return svg(w, h, title + " — " + subtitle + ". " + line1 + " " + line2 + " Private source. Abstract illustration.", b)
+
+
 def workflow():
     b = text(32, 38, "HOW I BUILD", 17, WHITE, 700, 'class="mono"')
     items = [("01 / UNDERSTAND", "Find the friction", "Start with the real workflow."),
@@ -212,6 +254,9 @@ def build(data):
              "activity.svg":telemetry(data), "activity-mobile.svg":telemetry(data, True),
              "landscape.svg":landscape(data), "project-quota.svg":project("quota"),
              "project-loupedeck.svg":project("loupedeck"), "workflow.svg":workflow()}
+    for kind in ("creatorscope", "den", "premiere"):
+        files[f"flagship-{kind}.svg"] = flagship(kind)
+        files[f"flagship-{kind}-mobile.svg"] = flagship(kind, True)
     for name, content in files.items():
         (assets/name).write_text(content)
     (assets/"public-activity.json").write_text(json.dumps(data, indent=2)+"\n")
